@@ -27,11 +27,11 @@
   <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
 	  <empty name="_SESSION['isCLogin']">
-	      <li>
+	     <!-- <li>
 			  <a href="__APP__/Record" target=_blank>
 				  <span class="glyphicon glyphicon-file"> 登录后台</span>
 			  </a>
-		  </li>    		
+		  </li>  -->  		
 	  <else />
 	        <li>
 				<span class="am-icon-user"><{$_SESSION['realname']}> </span> 
@@ -51,16 +51,6 @@
 			<span class="glyphicon glyphicon-home"> 测试迭代</span>
 		  </a>
 	  </li>
-        <!-- <li>
-			<a href="__APP__/<{$Think.config.PRODUCT}>/Index/link">
-				<span class="glyphicon glyphicon-link"> 常用链接</span>
-			</a>
-		</li>
-      <li>
-		  <a href="__APP__/<{$Think.config.PRODUCT}>/Bug/unconfirmed">
-			<span class="glyphicon glyphicon-bell"> 待处理BUG</span>
-		  </a>
-	  </li> -->
       <li>
 		  <a href="__APP__/<{$Think.config.PRODUCT}>/Task/personLoad">
 			<span class="glyphicon glyphicon-user"> 测试投入</span>

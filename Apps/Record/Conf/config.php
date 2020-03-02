@@ -9,6 +9,7 @@ return array(
     'DEFAULT_THEME' =>  'default',//开启模板
     'PRODID'        =>   11,    //定义产品编号
     'PRODUCT'       =>  'Record',//定义产品编号
+	'UPCAT'			=>  'Upcat',
 
 
 );

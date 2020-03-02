@@ -4,12 +4,15 @@ return array(
     'TMPL_PARSE_STRING'=>array(
         '__CSS__'=>__ROOT__.'/Public/css/',
         '__JS__'=>__ROOT__.'/Public/js/',
-        '__IMAGES__'=>__ROOT__.'/Public/images/Report',
-        '__IMG__'   =>__ROOT__.'/Public/images',
     ),
     'DEFAULT_THEME' =>  'Amaze',//开启模板
-    'PRODID'        =>   11,    //定义产品编号
+    'PRODID'        =>   15,    //定义产品编号
     'PRODUCT'       =>  'Report',//定义产品编号
 	'UPCAT'			=>  'Upcat',
+	
+	'DB_NAME'=>'yaolh',
+	'DB_USER'=>'root',
+	'DB_PWD'=>'root',
+	'DB_PREFIX'=>'',
 
 );
