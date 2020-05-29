@@ -59,8 +59,9 @@ class TaskestimateController extends WebInfoController {
         $this->assign('arr',$arr);
         $this->display();
     }
-
-    public function personnelDailyTask(){//人员每日任务投入分布表
+	
+	//人员每日任务投入分布表
+    public function personnelDailyTask(){
         $day=I('day',7);
         $this->assign('day',$day);
         $info=$this->getInfo();

@@ -2,14 +2,19 @@
 namespace Report\Controller;
 class TaskController extends WebInfoController {
     public function index(){
-        $users=M('user')
-        ->where(array("deleted"=>'0'))
+		
+		$user=array('yaolh','zhouxing','rthuangjt','sunllp');
+		//只看这些人员
+		$map['account']=array('in',$user);
+		$map['deleted']='0';
+        $users=M('user')->where($map)
         ->field("account,realname")
         ->order('account desc')->select();
         $this->assign('users',$users);
 
         $_SESSION['taskAccount']=I('account',$users[0]['account']);
         $riqi=date("Y-m-d",time()-7*24*3600);
+		$map=array();
         $map['date']  = array('egt',$riqi);
         $map['account']=$_SESSION['taskAccount'];
         $data=M('taskestimate')->where($map)->order('date desc')->select();

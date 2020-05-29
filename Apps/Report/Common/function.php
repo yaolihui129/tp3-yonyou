@@ -3,7 +3,7 @@
         $where=array('deleted'=>'0');
         $arr=M('task')->where($where)->find($task);
         $str="【".getProNo($arr['project']).'】'.getProname($arr['project']).'【'.taskLastUpdateDate($arr['id']).'】'
-            .'<span class="label label-default">'.getProst($arr['status'])."</span>"
+            .'<span class="label label-default">'.$arr['status']."</span>"
             .'<br><br>'.$arr['id'].':'.$arr['name'];
         return $str;
     }
@@ -194,6 +194,7 @@
         $where['status']=array('neq','done');
         $where['deleted']='0';
         $data=M('task')->where($where)->sum('estimate');
+		$data=round($data, 2);
         return $data;   
     }
     
@@ -208,6 +209,7 @@
         $where['status']=array('neq','done');
         $where['deleted']='0';
         $data=M('task')->where($where)->sum('consumed');
+		$data=round($data, 2);
         return $data;  
     }
     
@@ -224,6 +226,7 @@
         $data1=M('task')->where($where)->sum('estimate');
         $data2=M('task')->where($where)->sum('consumed');
         $data=$data1-$data2;
+		$data=round($data, 2);
         return $data;
     }
     
